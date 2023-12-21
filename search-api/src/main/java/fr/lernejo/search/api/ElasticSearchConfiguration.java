@@ -19,14 +19,14 @@ public class ElasticSearchConfiguration {
     private final int port;
     @Value("${elasticsearch.username:elastic}")
     private final String username;
-    @Value("${elasticsearch.password:password}")
+    @Value("${elasticsearch.password:admin}")
     private final String password;
 
     public ElasticSearchConfiguration(
         @Value("${elasticsearch.host:localhost}") String host,
         @Value("${elasticsearch.port:9200}") int port,
         @Value("${elasticsearch.username:elastic}") String username,
-        @Value("${elasticsearch.password:password}") String password) {
+        @Value("${elasticsearch.password:admin}") String password) {
         this.host = host;
         this.port = port;
         this.username = username;
